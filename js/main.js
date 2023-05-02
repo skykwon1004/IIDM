@@ -57,7 +57,21 @@ $(function () {
         dots: true,
         // vertical: true,
         autoplay: true,
-        autoplaySpeed: 2000,
+        autoplaySpeed: 5000,
+    });
+
+    $('.content_desc_slide').slick({
+        arrows: false,
+        dots: true,
+        slidesToShow: 3,
+    });
+
+    $('.content_desc .arrows .left').on('click', function () {
+        $('.content_desc_slide').slick('slickPrev')
+    });
+
+    $('.content_desc .arrows .right').on('click', function () {
+        $('.content_desc_slide').slick('slickNext')
     });
 
 

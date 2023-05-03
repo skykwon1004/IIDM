@@ -1,7 +1,7 @@
 $(function () {
 
     $('.mainFull').fullpage({
-        anchors: ['intro', 'l02', 'l03', 'l04', 'l05', 'l06'],
+        anchors: ['intro', 'l02', 'l03', 'l04', 'l05'],
         afterLoad: function (lnk, idx) {
             // console.log(lnk, idx);
             // 만약에 2번째에 오면 ... nav li class on을 붙이고 나머지 a 는 뗀다.
@@ -57,13 +57,21 @@ $(function () {
         dots: true,
         // vertical: true,
         autoplay: true,
-        autoplaySpeed: 5000,
+        autoplaySpeed: 3000,
     });
 
     $('.content_desc_slide').slick({
         arrows: false,
         dots: true,
         slidesToShow: 3,
+        responsive: [
+            {
+                breakpoint: 768,
+                settings: {
+                    slidesToShow: 1,
+                }
+            }
+        ]
     });
 
     $('.content_desc .arrows .left').on('click', function () {
@@ -75,4 +83,19 @@ $(function () {
     });
 
 
+
+    // 모바일
+
+    //mopen
+    $('.mopen').on('click', function () {
+        $('.header').toggleClass('on')
+    });
+
+    // 모바일 메뉴열었을때 뒤에 스크롤 안되게하는
+    $('.header').on('scroll wheel touchmove', function (e) {
+        if ($('.header').hasClass('on')) {
+            // header에 on이 붙었을때만 이벤트 정지하라
+            e.preventDefault();
+        };
+    });
 })

@@ -1,7 +1,7 @@
 $(function () {
 
     $('.mainFull').fullpage({
-        anchors: ['intro', 'l02', 'l03', 'l04', 'l05'],
+        anchors: ['intro', 'l02', 'l03', 'l04', 'l05', 'l06'],
         afterLoad: function (lnk, idx) {
             // console.log(lnk, idx);
             // 만약에 2번째에 오면 ... nav li class on을 붙이고 나머지 a 는 뗀다.
@@ -64,6 +64,7 @@ $(function () {
         arrows: false,
         dots: true,
         slidesToShow: 3,
+        slidesToScroll: 3,
         responsive: [
             {
                 breakpoint: 768,
@@ -82,6 +83,24 @@ $(function () {
         $('.content_desc_slide').slick('slickNext')
     });
 
+
+    $('.portfolio_slide').slick({
+        arrows: false,
+        dots: false,
+        slidesToShow: 3,
+        slidesToScroll: 3,
+        // centerMode: true,
+        // centerPadding:'300px',
+    });
+
+
+    $('.slider_wrap .portfolio_arrows .left').on('click', function () {
+        $('.portfolio_slide').slick('slickPrev')
+    });
+
+    $('.slider_wrap .portfolio_arrows .right').on('click', function () {
+        $('.portfolio_slide').slick('slickNext')
+    });
 
 
     // 모바일

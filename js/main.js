@@ -41,7 +41,21 @@ $(function () {
             // } else {
             //     $('nav').removeClass('on');
             // }
+
+
+
+
+
+            if (idx == 2) {
+                $('.sec_content02 .box').addClass('on');
+            }
+
+
+
+
+
         },
+
         onLeave: function (idx, nIdx, dir) {
             console.log(idx, nIdx, dir);
             $('nav li').eq(nIdx - 1).addClass('on').siblings().removeClass('on')
@@ -51,6 +65,10 @@ $(function () {
         // navigationPosition: 'left',
         // navigationTooltips: ['firstSlide', 'secondSlide'],
     });
+
+
+
+
 
     $('.main_slide').slick({
         arrows: false,
@@ -86,11 +104,19 @@ $(function () {
 
     $('.portfolio_slide').slick({
         arrows: false,
-        dots: false,
+        dots: true,
         slidesToShow: 3,
         slidesToScroll: 3,
         // centerMode: true,
         // centerPadding:'300px',
+        responsive: [
+            {
+                breakpoint: 768,
+                settings: {
+                    slidesToShow: 1
+                }
+            }
+        ]
     });
 
 
@@ -103,8 +129,22 @@ $(function () {
     });
 
 
-    // 모바일
 
+
+    // sec04 PARTNERS tab
+    $('.left_itm .menu>li').on('click', function () {
+        var idx = $(this).index();
+        console.log(idx);
+        $('.right_itm div').removeClass('on');
+        $('.right_itm div').eq(idx).addClass('on');
+
+        $('.left_itm .menu>li').removeClass('on');
+        $(this).addClass('on');
+    })
+
+
+
+    // 모바일
     //mopen
     $('.mopen').on('click', function () {
         $('.header').toggleClass('on')
@@ -117,4 +157,7 @@ $(function () {
             e.preventDefault();
         };
     });
+
+
+
 })

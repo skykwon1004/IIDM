@@ -27,6 +27,7 @@
 
     <script src="./js/jquery-1.12.4.min.js"></script>
     <script src="./js/slick.min.js"></script>
+    <!-- <script src="https://cdn.jsdelivr.net/npm/lazyload@2.0.0-rc.2/lazyload.js"></script> -->
     <script src="./js/jquery.fullpage.min.js"></script>
     <script src="./js/jquery.easings.min.js"></script>
     <script src="./js/main.js"></script>
@@ -56,6 +57,7 @@
         </button>
     </header>
     <div class="mainFull">
+        
         <section class="section mainVisual">
             <div class="inner">
                 <div class="main_slide">
@@ -96,7 +98,7 @@
                         <figure class="about_wrap">
                             <img src="./img/logo_dark.png" class="about_logo" alt="다크 로고">
                         </figure>
-                        <div class="content_desc">
+                        <div class="content_desc box">
                             <p>
                                 <b>IIDM VENTURES</b> is dedicated to the investment, management, development, and the
                                 acceleration of WEB3,
@@ -124,7 +126,7 @@
                             <div class="content_desc_slide">
                                 <div class="con">
                                     <figure>
-                                        <img src="./img/service01.jpg" alt="컨설팅">
+                                        <img class="lazy" data-src="./img/service01.jpg" alt="컨설팅">
                                     </figure>
                                     <div class="sec03_slide_text">
                                         <strong>IPO LISTING 상장 거래지원 컨설팅 프로그램</strong>
@@ -198,6 +200,83 @@
                                     </div>
                                 </div>
                             </div>
+                            <!-- <div class="content_desc_slide">
+                                <div class="con">
+                                    <figure>
+                                        <img class="lazy" data-src="./img/service01.jpg" alt="컨설팅">
+                                    </figure>
+                                    <div class="sec03_slide_text">
+                                        <strong>IPO LISTING 상장 거래지원 컨설팅 프로그램</strong>
+                                        <p>IIDM VENTURES는 AI BIGDATA, WEB3, BLOCKCHAIN 혁신 벤처기업의 주식 및 암호화폐 상장 자문을 각 지점에서
+                                            운영하고
+                                            있습니다.
+                                        </p>
+                                    </div>
+                                </div>
+                                <div class="con">
+                                    <figure>
+                                        <img class="lazy" data-src="./img/service02.jpg" alt="스타트업">
+                                    </figure>
+                                    <div class="sec03_slide_text">
+                                        <strong>START UP 엑셀러레이팅 프로그램</strong>
+                                        <p>IIDM VENTURES는 스타트업 및 벤처기업의 경영혁신 엑셀러레이터 프로그램을 국내 및 글로벌 각 지점에서 운영하고 있습니다.
+                                        </p>
+                                    </div>
+                                </div>
+                                <div class="con">
+                                    <figure>
+                                        <img class="lazy" data-src="./img/service03.jpg" alt="경영혁신">
+                                    </figure>
+                                    <div class="sec03_slide_text">
+                                        <strong>경영혁신 내부역량강화 프로그램</strong>
+                                        <p>비즈니스플랜(IR BOOK), 자금조달, 재무회계, 기업인증 연구소 특허 자문 등 상장사 CFO, 회계법인, 창업투자사, 사모펀드, 중기부
+                                            산하 기관, 국내 은행, 조달청 등 출신 IIDM자문단이 지원해드립니다.
+                                        </p>
+                                    </div>
+                                </div>
+                                <div class="con">
+                                    <figure>
+                                        <img class="lazy" data-src="./img/service04.jpg" alt="밸류업 역량강화">
+                                    </figure>
+                                    <div class="sec03_slide_text">
+                                        <strong>밸류업(VALUE UP) 글로벌 역량강화 프로그램</strong>
+                                        <p>IIDM VENTURES 각 국가별 지점을 통해 글로벌 진출, 사업개발 및 마케팅 등 글로벌 역량강화 프로그램을 운영하고 있습니다.
+                                        </p>
+                                    </div>
+                                </div>
+                                <div class="con">
+                                    <figure>
+                                        <img class="lazy" data-src="./img/service05.jpg" alt="국내 유통 해외수출지원">
+                                    </figure>
+                                    <div class="sec03_slide_text">
+                                        <strong>국내 조달유통, 해외수출지원</strong>
+                                        <p>국내 정부조달, 유통플랫폼 및 AMAZON, COSTCO, ALIBABA, CPGROUP, CETNRAL GROUP BIGC 등 플랫폼
+                                            대행사를 통해서 국내유통 및 해외 수출 지원해 드립니다.
+                                        </p>
+                                    </div>
+                                </div>
+                                <div class="con">
+                                    <figure>
+                                        <img class="lazy" data-src="./img/service01.jpg" alt="기술 펀드">
+                                    </figure>
+                                    <div class="sec03_slide_text">
+                                        <strong>글로벌 혁신 기술 펀드(INNOTECH VC FUND) 프로그램</strong>
+                                        <p>한국•미국•글로벌 CROSS BORDER, FUND결성 운영, 혁신벤처기업투자 및 인수합병 프로그램을 운영하고 있습니다.
+                                        </p>
+                                    </div>
+                                </div>
+                                <div class="con">
+                                    <figure>
+                                        <img class="lazy" data-src="./img/service01.jpg" alt="블록체인">
+                                    </figure>
+                                    <div class="sec03_slide_text">
+                                        <strong>WEB3기반 BLOCKCHAIN 엑셀러레이팅 프로그램</strong>
+                                        <p>IIDM VENTURES는 기존 전통적인 산업에서 WEB3 기반과 블록체인으로의 지속가능한 혁신화 프로그램을 각 국가별(미국, 두바이,
+                                            싱가포르, 서울)로 운영하고 있습니다.
+                                        </p>
+                                    </div>
+                                </div>
+                            </div> -->
                             <div class="arrows">
                                 <button class="left"><i class="xi-angle-left-thin"></i></button>
                                 <button class="right"><i class="xi-angle-right-thin"></i></button>
@@ -209,12 +288,24 @@
         </section>
 
         <section class="section sec04">
-            <div class="sec_content04">
-                <div class="center">
-                    <div class="inner">
+            <!-- <div class="sec04_bg"></div> -->
+            <div class="sec_content04 inner">
+                <div class="left_itm">
+                    <div class="left_tit">
                         <strong class="title">PARTNERS</strong>
-                        <p>미국 워싱턴주 시애틀 지역 글로벌 파트너십 및 네트워크: 플랫폼, 금융, VC, 엑셀러레이터 및 테크놀로지</p>
-                        <div class="partners">
+                        <p>
+                            파트너와 함께 성장할 수 있는 모델을 가지고 함께 성장 할 다양한 사업을 추진하고 있습니다.
+                        </p>
+                        <ul class="menu">
+                            <li class="on">미국 워싱턴주 파트너십 및 네트워크</li>
+                            <li>글로벌 블록체인 파트너십 및 네트워크</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="right_itm">
+                    <div class="content content01 on">
+                        <span>미국 워싱턴주 파트너십 및 네트워크 : 플랫폼, 금융, VC, 엑셀러레이터 및 테크놀로지</span>
+                        <ul class="con_01">
                             <ul>
                                 <li><img src="./img/partners01.jpg" alt=""></li>
                                 <li><img src="./img/partners02.jpg" alt=""></li>
@@ -255,7 +346,52 @@
                                 <li><img src="./img/partners29.jpg" alt=""></li>
                                 <li><img src="./img/partners30.jpg" alt=""></li>
                             </ul>
-                        </div>
+                        </ul>
+                    </div>
+                    <div class="content content02">
+                        <span>글로벌 블록체인 파트너십 및 네트워크 : 거래소, VC, 엑셀러레이터 및 테크놀로지</span>
+                        <ul class="con_02">
+                            <ul>
+                                <li><img src="./img/partners31.jpg" alt=""></li>
+                                <li><img src="./img/partners32.jpg" alt=""></li>
+                                <li><img src="./img/partners33.jpg" alt=""></li>
+                                <li><img src="./img/partners34.jpg" alt=""></li>
+                                <li><img src="./img/partners35.jpg" alt=""></li>
+                                <li><img src="./img/partners36.jpg" alt=""></li>
+                            </ul>
+                            <ul>
+                                <li><img src="./img/partners37.jpg" alt=""></li>
+                                <li><img src="./img/partners38.jpg" alt=""></li>
+                                <li><img src="./img/partners39.jpg" alt=""></li>
+                                <li><img src="./img/partners40.jpg" alt=""></li>
+                                <li><img src="./img/partners41.jpg" alt=""></li>
+                                <li><img src="./img/partners42.jpg" alt=""></li>
+                            </ul>
+                            <ul>
+                                <li><img src="./img/partners43.jpg" alt=""></li>
+                                <li><img src="./img/partners44.jpg" alt=""></li>
+                                <li><img src="./img/partners45.jpg" alt=""></li>
+                                <li><img src="./img/partners46.jpg" alt=""></li>
+                                <li><img src="./img/partners47.jpg" alt=""></li>
+                                <li><img src="./img/partners48.jpg" alt=""></li>
+                            </ul>
+                            <ul>
+                                <li><img src="./img/partners49.jpg" alt=""></li>
+                                <li><img src="./img/partners50.jpg" alt=""></li>
+                                <li><img src="./img/partners51.jpg" alt=""></li>
+                                <li><img src="./img/partners52.jpg" alt=""></li>
+                                <li><img src="./img/partners53.jpg" alt=""></li>
+                                <li><img src="./img/partners54.jpg" alt=""></li>
+                            </ul>
+                            <ul>
+                                <li><img src="./img/partners55.jpg" alt=""></li>
+                                <li><img src="./img/partners56.jpg" alt=""></li>
+                                <li><img src="./img/partners57.jpg" alt=""></li>
+                                <li><img src="./img/partners58.jpg" alt=""></li>
+                                <li><img src="./img/partners59.jpg" alt=""></li>
+                                <li><img src="./img/partners60.jpg" alt=""></li>
+                            </ul>
+                        </ul>
                     </div>
                 </div>
             </div>
@@ -338,10 +474,10 @@
                                 <img src="./img/portfolio21.jpg" class="port_img" alt="">
                             </div>
                         </div>
-                        <div class="portfolio_arrows">
+                        <!-- <div class="portfolio_arrows">
                             <button class="left"><i class="xi-angle-left-thin"></i></button>
                             <button class="right"><i class="xi-angle-right-thin"></i></button>
-                        </div>
+                        </div> -->
                     </div>
                 </div>
         </section>

@@ -1,3 +1,7 @@
+* {
+    outline: 1px solid --rgb(255, 0, 0, 0.2);
+}
+
 body {
     font-family: 'Pretendard', 'Roboto', 'Noto Sans KR', sans-serif;
     letter-spacing: -0.025em;
@@ -228,13 +232,13 @@ nav li.on a {
 }
 
 .sec_content02 .top .about_wrap img {
-    width: 25%;
+    width: 22%;
 }
 
 .sec_content02 .title {
     display: block;
     margin: 0 0 30px 0;
-    font-size: 58px;
+    font-size: 56px;
     font-weight: 900;
 }
 
@@ -251,6 +255,43 @@ nav li.on a {
 .sec_content02 .content_desc {
     display: flex;
     gap: 30px;
+}
+
+/* .sec_content02 .box.on {
+    animation: move_text 1.5s;
+    animation-iteration-count: 1;
+
+    transform: translate(-150%, 0);
+}
+
+@keyframes move_text {
+    
+    0% {
+        transform: translate(0, 0);
+    }
+} */
+
+.sec_content02 .box {
+    opacity: 0;
+    transform: translateX(-150%);
+}
+
+.sec_content02 .box.on {
+    animation: move_text 1s;
+    animation-iteration-count: 1;
+    animation-fill-mode: forwards;
+}
+
+@keyframes move_text {
+    0% {
+        opacity: 0;
+        transform: translateX(-150%);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateX(0);
+    }
 }
 
 .sec_content02 .content_desc>p {
@@ -286,7 +327,6 @@ nav li.on a {
     flex: 1.5;
 }
 
-
 /* sec03 */
 .sec_content03 {
     height: 100vh;
@@ -306,6 +346,7 @@ nav li.on a {
     background: url(../img/portfolio_bg.jpg)no-repeat top center/cover;
     padding: 100px 0;
 }
+
 /* 
 .sec_content03 .center::before {
     content: "";
@@ -321,7 +362,7 @@ nav li.on a {
 .sec_content03 .title {
     display: block;
     margin: 0 0 30px 0;
-    font-size: 58px;
+    font-size: 56px;
     font-weight: 900;
     color: #fff;
 }
@@ -463,10 +504,21 @@ nav li.on a {
 
 
 /* sec04 */
+.sec04 {
+    position: relative;
+}
+
+/* .sec04_bg {
+    width: 41%;
+    height: 100vh;
+    background: url(../img/contact_bg.jpg)no-repeat center center/cover;
+    opacity: 0.4;
+} */
+
 .sec_content04 .title {
     display: block;
     margin: 0 0 30px 0;
-    font-size: 58px;
+    font-size: 56px;
     font-weight: 900;
 }
 
@@ -486,8 +538,148 @@ nav li.on a {
     line-height: 1;
 }
 
+/*
 .sec_content04 .partners ul {
     display: flex;
+} */
+
+.sec_content04 {
+    position: absolute;
+    display: flex;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.sec_content04 .left_itm {
+    flex: 1;
+    padding: 100px 0;
+
+}
+
+.sec_content04 .left_tit h2 {
+    position: relative;
+    font-size: 51px;
+    font-weight: 700;
+    margin: 0 0 30px 0;
+}
+
+.sec_content04 .left_tit h2:before {
+    position: absolute;
+    top: -10px;
+    left: -20px;
+    content: "";
+    width: 17px;
+    height: 4px;
+    background: #a63145;
+    transform: rotate(-50deg);
+}
+
+.sec_content04 .left_tit p {
+    font-size: 22px;
+    font-weight: 500;
+    line-height: 1.4;
+    word-break: keep-all;
+    margin: 0 0 100px 0;
+}
+
+.sec_content04 .left_tit .menu {
+    border-top: 1px solid #191919;
+    font-size: 18px;
+}
+
+.sec_content04 .left_tit .menu li {
+    display: block;
+    padding: 25px 30px;
+    cursor: pointer;
+    border-bottom: 1px solid #ddd;
+    font-weight: 300;
+}
+
+.sec_content04 .left_itm {
+    flex: 1.5;
+}
+
+.sec_content04 .right_itm {
+    flex: 3;
+}
+
+.sec_content04 .content {
+    padding: 100px 0 100px 60px;
+}
+
+.sec_content04 .right_itm span {
+    display: block;
+    font-size: 22px;
+    font-weight: 500;
+    text-align: center;
+    margin: 0 0 30px 0;
+    padding: 20px 30px;
+    background: #49b9e7;
+    color: #fff;
+}
+
+/* .sec_content04 .right_itm h3::before {
+    display: inline-block;
+    content: "\e93f";
+    font-size: 12px;
+    padding: 6px;
+    border-radius: 50%;
+    background: #777;
+    color: #fff;
+    font-family: xeicon;
+    margin: 0 10px 0 0;
+    vertical-align: 2px;
+} */
+
+.sec_content04 .content01 .con_01 {
+    display: flex;
+    gap: 10px;
+}
+
+/* .sec_content04 .content01 .con_01 li {
+    padding: 30px 50px;
+    background: #eee;
+} */
+
+.sec_content04 .content02 .con_02 {
+    display: flex;
+    gap: 10px;
+}
+
+/* .sec_content04 .content02 .con_02 li {
+    padding: 30px 50px;
+    background: #eee;
+} */
+
+.sec_content04 .content01 .con_01 img {
+    margin: 0 0 10px 0;
+}
+
+.sec_content04 .content02 .con_02 img {
+    margin: 0 0 10px 0;
+}
+
+.sec_content04 .content01 {
+    display: none;
+}
+
+.sec_content04 .content02 {
+    display: none;
+}
+
+.sec_content04 .content01.on {
+    display: block;
+}
+
+.sec_content04 .content02.on {
+    display: block;
+}
+
+.sec_content04 .menu li.on {
+    color: #bb3047;
+    font-weight: 700;
+    background: #f9f9f9;
 }
 
 
@@ -513,7 +705,7 @@ nav li.on a {
 .sec_content05 .title {
     display: block;
     margin: 0 0 30px 0;
-    font-size: 58px;
+    font-size: 56px;
     font-weight: 900;
     color: #fff;
 }
@@ -574,12 +766,40 @@ nav li.on a {
 }
 
 .sec_content05 .portfolio_arrows .left {
-    margin: 0 0 0 -40px;
+    margin: 0 0 0 -160px;
 }
 
 .sec_content05 .portfolio_arrows .right {
-    margin: 0 0 0 40px;
+    margin: 0 0 0 160px;
 }
+
+.sec_content05 .slick-dots {
+    position: absolute;
+    bottom: -50px;
+    left: 50%;
+    transform: translate(-50%, 0);
+}
+
+.sec_content05 .slick-dots li {
+    display: inline-block;
+    margin: 0 10px 0 0;
+}
+
+.sec_content05 .slick-dots li button {
+    font-size: 0;
+    border: none;
+    background: rgb(249, 249, 249, 0.4);
+
+    width: 15px;
+    height: 15px;
+
+    cursor: pointer;
+}
+
+.sec_content05 .slick-dots li.slick-active button {
+    background: var(--main_color);
+}
+
 
 
 /* footer */
@@ -588,6 +808,8 @@ nav li.on a {
     display: flex;
     flex-direction: column;
     justify-content: center;
+
+    background: url(../img/contact_bg.jpg)no-repeat top center/cover;
 }
 
 .sec_content06>* {
@@ -600,33 +822,39 @@ nav li.on a {
     padding: 100px 0;
 }
 
-/* 
-.sec_content06 .center::before {
+.sec_content06 .center::after {
     content: "";
+    width: 1px;
+    height: 150px;
+    background: #ddd;
+
     position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    background: #000;
-    opacity: 0.4;
-    height: 100%;
-} */
+    top: 50%;
+    left: 50%;
+    transform: translate(0, -50%);
+}
 
 .sec_content06 .inner {
     position: absolute;
     top: 50%;
     left: 50%;
-    transform: translate(-50%, -50%);
+    transform: translate(-50%, -25%);
     z-index: 999;
 
     display: flex;
     gap: 30px;
+
+    padding: 0 0 180px 0;
+}
+
+.sec_content06 .inner>div {
+    flex: 1;
 }
 
 .sec_content06 .title {
     display: block;
     margin: 0 0 30px 0;
-    font-size: 58px;
+    font-size: 56px;
     font-weight: 900;
 }
 
@@ -640,30 +868,9 @@ nav li.on a {
     margin: 0 0 0 15px;
 }
 
-.sec_content06 .inner>div {
-    flex: 1;
-}
-
-.sec_content06 .inner {
-    padding: 0 0 180px 0;
-}
 
 .sec_content06 .inner .contact_left p {
     font-size: 22px;
-}
-
-.sec_content06 .inner .contact_right {
-    /* background: url(../img/contact_bg.jpg)no-repeat center center/cover; */
-    /* padding: 0 0 0 150px; */
-    /* background: rgb(51, 51, 51, 0.5); */
-    /* border-radius: 20px; */
-
-    /* display: flex;
-    flex-direction: column;
-    align-items: center; */
-
-    border-left: 1px solid #ddd;
-    /* outline: 1px solid red; */
 }
 
 .sec_content06 .inner .contact_right strong {
@@ -671,11 +878,6 @@ nav li.on a {
     margin: 0 0 30px 250px;
     font-size: 40px;
     font-weight: 900;
-    /* padding: 20px 0;
-    text-align: center;
-    background: var(--main_color);
-
-    color: #fff; */
 }
 
 .sec_content06 .inner .contact_right strong::after {
@@ -707,7 +909,7 @@ nav li.on a {
     left: 0;
     width: 100%;
     height: 180px;
-    background: #222;
+    background: #333;
 }
 
 .sec_content06 .footer_wrap .footer_content {
@@ -755,13 +957,15 @@ nav li.on a {
     right: 50px;
     font-size: 28px;
     color: #fff;
-    padding: 15px;
-    background: var(--main_color);
-    border-radius: 10px;
-
     display: none;
 }
 
+.totop a {
+    padding: 13px 15px;
+    background: var(--main_color);
+    border-radius: 10px;
+
+}
 
 .mopen {
     position: fixed;
@@ -776,7 +980,7 @@ nav li.on a {
 .mopen i {
     background: rgba(137, 137, 137, 0.7);
     padding: 8px;
-    font-size: 27px;
+    font-size: 26px;
 }
 
 
